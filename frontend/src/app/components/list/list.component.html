@@ -1,0 +1,28 @@
+<div class="list">
+        <table>
+            <tr style="color:black;">
+                <th>Task</th>
+                <th>Last update</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+          <tr *ngFor="let task of tasks">
+              <td style="text-align: start;">{{ task.description }}</td>
+              <td>{{ task.date | date:'yyyy-MM-dd HH:mm' }}</td>
+              <td>
+                <span *ngIf="task.status" class="material-icons" style="color:green;">&#xe876;</span>
+                <span *ngIf="!task.status" class="material-icons" style="color:crimson;">&#xe5cd;</span>
+              </td>
+              <td style="display: flex;margin-left: 43%;">
+                <div style="background-color: snow;padding: 3px;border-radius: 5px;">
+                    <button class="material-icons" style="color:green;" (click)="changeStatus(task.id)">
+                      &#xe92f;
+                    </button>
+                    <button class="material-icons" style="color:crimson;font-size: 27px;" (click)="deleteTask(task.id)">
+                      &#xe92b;
+                    </button>
+                </div>
+              </td>
+          </tr>
+        </table> 
+</div>

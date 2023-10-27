@@ -1,0 +1,40 @@
+mat-form-field{
+    display: flex;
+    text-align: center;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+}
+
+input {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 30px;
+    border-radius: 5px;
+}
+
+
+input:focus {
+    color: black;
+    outline: none;
+}
+
+button {
+    height: 35px;
+    vertical-align: middle; 
+    border: none;
+    border-radius: 20px;
+}
+button:active{
+    color:#333;
+    background-color: lightgray;
+    -webkit-box-shadow: 5px 5px 26px -5px rgba(0,0,0,0.6); 
+    box-shadow: 5px 5px 26px -5px rgba(0,0,0,0.6);
+}
+
+
+::placeholder {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    text-align: end;
+    color: #333;
+    margin-right: 10px;
+}

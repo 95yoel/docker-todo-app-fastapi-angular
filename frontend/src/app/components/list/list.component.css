@@ -1,0 +1,18 @@
+.list{
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: var(--terciary-color);
+    width: 100%;
+}
+.list table {
+    width: 100%;
+}
+button{
+    transition: 0.5s;
+    border: none;
+    background-color: snow;
+}
+
+
+

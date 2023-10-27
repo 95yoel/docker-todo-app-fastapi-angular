@@ -1,0 +1,19 @@
+<div>
+    <form>
+        <mat-form-field>
+            <mat-label>Insert task :</mat-label>
+            <input matInput placeholder="Write the task ..." style="margin-left: 5px;"
+            [formControl]="taskFormControl"
+            (input)="updateFormValue()"
+            (keydown.enter)="submit()"
+            autofocus>
+            
+            <button mat-raised-button color="primary" *ngIf="show" type="button"
+            class="material-icons"
+            (click)="submit()">
+                &#xe163;
+            </button>
+        </mat-form-field>
+    </form>
+</div>
+

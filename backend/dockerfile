@@ -1,0 +1,15 @@
+FROM python:3.11.4
+
+WORKDIR /backend
+
+COPY . .
+
+RUN pip install -r requirements.txt
+RUN pip install uvicorn
+
+EXPOSE 8000
+
+#wait ten seconds to run the server
+
+CMD ["bash", "-c", "sleep 10 && uvicorn main:app --host 0.0.0.0 --port 8000"]
+
